@@ -15,8 +15,9 @@ const Maps: React.FC = () => {
 
     const closestTeslaTextField = target.closest(".tesla-text-field");
     const closestKeyboard = target.closest("#keyboard");
+		const closestIframe = target.closest("iframe");
 
-    if (!closestTeslaTextField && !closestKeyboard) {
+    if (!closestTeslaTextField && !closestKeyboard && !closestIframe) {
       setIsTypingDest(false);
     }
   };
@@ -45,7 +46,7 @@ const Maps: React.FC = () => {
 
   return (
     <div className="relative w-full h-screen">
-      <div id="maps-border" className="h-[85px] bg-white" />
+      <div id="maps-border" className="relative -z-[1] h-[64px] bg-white" />
       <div className="absolute w-full h-full cover">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12430.618419150835!2d-77.27499585!3d38.84037034999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1733876273969!5m2!1sen!2sus"
@@ -61,11 +62,11 @@ const Maps: React.FC = () => {
       <div
         className="
 				absolute top-[135px] left-[50px] bg-[rgb(246,246,246,95%)] rounded-lg 
-				w-[450px] h-[100px] shadow-lg flex flex-row gap-4 items-center
-				text-[#454545] text-2xl
+				w-[350px] h-[64px] shadow-lg flex flex-row gap-2 items-center
+				text-[#454545] text-lg
 			"
       >
-        <img src={searchIcon} className="ml-4" />
+        <img src={searchIcon} className="ml-4 h-[32px]" />
         <input
           type="text"
           className="tesla-text-field relative cursor-text outline-none bg-transparent"
@@ -77,7 +78,7 @@ const Maps: React.FC = () => {
       </div>
       <div
         className="
-				absolute bottom-[100px] left-0 w-[calc(100%-360px)] overflow-hidden
+				absolute bottom-[64px] left-0 w-[calc(100%-250px)] overflow-hidden
 				transition-[max-height] duration-[350ms]
 			"
         style={{

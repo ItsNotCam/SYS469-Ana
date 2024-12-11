@@ -68,6 +68,7 @@ const Keyboard: React.FC<KeyboardProps> = ({ onClickKey: sendKeyToParent }) => {
 			case "SHIFT":
 			case "MICROPHONE":
 			case "BACKSPACE":
+			case "SPACE":
 			case "BACK":
 			case "ENTER":
 			case "NEXT": 
@@ -95,6 +96,7 @@ const Keyboard: React.FC<KeyboardProps> = ({ onClickKey: sendKeyToParent }) => {
         key: <img src={BackArrowIcon} id="BACKSPACE" className="mx-auto" />,
         colSpan: 2,
         value: "BACKSPACE",
+				alwaysHighlighted: true,
       }),
     ],
     [
@@ -107,7 +109,12 @@ const Keyboard: React.FC<KeyboardProps> = ({ onClickKey: sendKeyToParent }) => {
       new KeyboardKey({ key: <>j</>, colSpan: 1, value: "j" }),
       new KeyboardKey({ key: <>k</>, colSpan: 1, value: "k" }),
       new KeyboardKey({ key: <>l</>, colSpan: 1, value: "l" }),
-      new KeyboardKey({ key: <>Enter</>, colSpan: 2, value: "ENTER" }),
+      new KeyboardKey({ key: 
+				<>Enter</>, 
+				colSpan: 2, 
+				value: "ENTER",
+				alwaysHighlighted: true, 
+			}),
     ],
     [
       new KeyboardKey({ key: <>z</>, colSpan: 1, value: "z" }),
@@ -139,7 +146,7 @@ const Keyboard: React.FC<KeyboardProps> = ({ onClickKey: sendKeyToParent }) => {
         colSpan: 2,
       }),
       new KeyboardKey({
-        key: <>Space</>,
+        key: <></>,
 				value: "SPACE",
         colSpan: 10,
         alwaysHighlighted: true,
@@ -162,7 +169,7 @@ const Keyboard: React.FC<KeyboardProps> = ({ onClickKey: sendKeyToParent }) => {
         colSpan: 2,
         alwaysHighlighted: true,
       }),
-      new KeyboardKey({ key: <></>, colSpan: 4, hoverable: false, value: "NULL" }), // a spacer
+      // new KeyboardKey({ key: <></>, colSpan: 4, hoverable: false, value: "NULL" }), // a spacer
     ],
   ];
 
@@ -182,8 +189,8 @@ const Keyboard: React.FC<KeyboardProps> = ({ onClickKey: sendKeyToParent }) => {
 	];
 
   return (
-    <div id="keyboard" className="grid grid-cols-[1fr,500px] bg-white w-full">
-      <div className="h-full ml-auto flex flex-col gap-4 justify-start items-center p-4">
+    <div id="keyboard" className="grid grid-cols-[1fr,350px] place-items-center bg-white w-full">
+      <div className="flex flex-col gap-4 justify-start items-center p-4">
         {keys.map((row: KeyboardKey[], i: number) => (
           <div
             className="grid mx-auto gap-4"
@@ -199,7 +206,7 @@ const Keyboard: React.FC<KeyboardProps> = ({ onClickKey: sendKeyToParent }) => {
                 key={`key-${i}`}
                 onClick={() => handleKeyClick(key)}
                 className={`
-								text-2xl p-8 text-center rounded-lg select-none
+								text-lg px-6 py-4 text-center rounded-lg select-none
 								${key.alwaysHighlighted ? "bg-gray-200" : null}
 								${key.hoverable
                     ? key.alwaysHighlighted
@@ -217,12 +224,16 @@ const Keyboard: React.FC<KeyboardProps> = ({ onClickKey: sendKeyToParent }) => {
           </div>
         ))}
       </div>
-      <div className="mx-auto h-full grid grid-cols-[repeat(3,125px)] grid-rows-[repeat(4,100px)] p-4 place-items-center my-auto">
+      <div className="
+				mr-auto h-full grid w-[300px]
+				grid-cols-[repeat(3,100px)] 
+				place-items-center my-auto cursor-default select-none
+			">
         {numpadKeys.map((key) => (
           <div
 						onClick={() => handleKeyClick(key)}
-            className={`grid place-items-center p-8 my-auto 
-						${key.hoverable ? "hover:bg-gray-300" : null} rounded-lg text-2xl
+            className={`grid place-items-center px-8 py-4 my-auto 
+						${key.hoverable ? "hover:bg-gray-300" : null} rounded-lg text-lg
 					`}
           >
             {key.key}

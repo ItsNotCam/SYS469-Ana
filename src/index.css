@@ -9,6 +9,7 @@
 	height: 100%;
 	overflow: hidden;
 	z-index: 1;
+	width: 10px;
 }
 
 .tesla-icon {
@@ -21,7 +22,7 @@
 }
 
 .side-nav.open {
-	width: 360px;
+	width: 250px;
 }
 
 .side-nav.closed {

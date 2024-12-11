@@ -29,8 +29,11 @@ const SideNav: React.FC<SlideNavProps> = (props) => {
 	}
 
 	return (
-		<div className={`side-nav z-[2] ${isOpen ? 'open' : 'closed'} bg-[#f0f0f0]`}>
-			<div className="content flex flex-col w-fit gap-4 pl-2 items-center ml-[1rem] pt-12">
+		<div className={`side-nav w-[250px] z-10 ${isOpen ? 'open' : 'closed'} bg-[#f0f0f0]`}>
+			<div className="
+				content flex flex-col px-4 gap-2 items-center 
+				mx-auto mt-8
+			">
 				<NavItem 
 					label='Home'
 					icon={homeIcon} 		
