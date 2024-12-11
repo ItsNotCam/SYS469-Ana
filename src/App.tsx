@@ -12,7 +12,7 @@ function App() {
 	const pages = useRef<JSX.Element[]>([
 		<Home />,
 		<Maps />,
-		<Audio />,
+		<Audio type='radio'/>,
 		<ClimateControl />,
 		<Storage />,
 	]);
