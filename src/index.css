@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.side-nav {
+	box-shadow: 0 0 20px rgba(12,12,12,20%);
+	position: absolute;
+	right: 0;
+	height: 100%;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.tesla-icon {
+	width: 2.5rem;
+	height: 2.5rem;
+}
+
+.inner-shadow-light {
+	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.07);
+}
+
+.side-nav.open {
+	width: 360px;
+}
+
+.side-nav.closed {
+	width: 0;
+}
+
+.tesla-btn {
+	box-shadow: 2px 2px 8px rgba(12,12,12,50%);
+	border-radius: 4px;	
+	@apply w-fit px-8 py-2 bg-white text-[#333333];
+}
+
+.tesla-box {
+	background-color: white;
+	box-shadow: 0 0 5px rgba(117,117,117,40%);
+}
