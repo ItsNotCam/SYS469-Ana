@@ -61,7 +61,7 @@ const Maps: React.FC = () => {
       {/* <img src={maps} className="-z-[1] absolute w-full h-full cover" /> */}
       <div
         className="
-				absolute top-[135px] left-[50px] bg-[rgb(246,246,246,95%)] rounded-lg 
+				absolute top-[75px] left-[20px] bg-[rgb(246,246,246,95%)] rounded-lg 
 				w-[350px] h-[64px] shadow-lg flex flex-row gap-2 items-center
 				text-[#454545] text-lg
 			"
@@ -78,9 +78,9 @@ const Maps: React.FC = () => {
       </div>
       <div
         className="
-				absolute bottom-[64px] left-0 w-[calc(100%-250px)] overflow-hidden
-				transition-[max-height] duration-[350ms]
-			"
+					absolute bottom-[64px] left-0 w-[calc(100%-250px)] overflow-hidden
+					transition-[max-height] duration-[350ms]
+				"
         style={{
           maxHeight: isTypingDest ? "1000px" : "0px",
         }}
