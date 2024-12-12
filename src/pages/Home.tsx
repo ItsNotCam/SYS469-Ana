@@ -1,12 +1,8 @@
 import model3 from '../assets/Model 3.png';
 
 const Home: React.FC = () => (
-	<div className='flex h-screen overflow-hidden w-full' style={{
-		backgroundImage: "url('src/assets/Model 3.png')",
-		backgroundPosition: "center 400%",
-		backgroundRepeat: "no-repeat",
-	}}>
-		<img src={model3} className="object-cover -z-[1] h-[850px] mx-auto mt-auto ml-12 hidden" />
+	<div className='flex h-screen overflow-hidden w-full'>
+		<img src={model3} className="object-cover -z-[1] h-[850px] mx-auto mt-auto ml-12" />
 		<div className="absolute bottom-[7rem] left-12 flex flex-row gap-12">
 			<iframe 
 				style={{ borderRadius: "12px" }} 

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import model3 from "../assets/Model 3.png";
 
 import frunkIcon from "../assets/frunk.png";
 import carIcon from "../assets/car.png";
@@ -152,10 +151,17 @@ const Storage: React.FC = () => {
 
   return (
     <div className="flex h-screen overflow-hidden w-full">
-      <img
-        src={model3}
-        className="absolute -left-12 -bottom-12 object-cover -z-[1] h-[850px] mr-auto mt-auto ml-12"
-      />
+      
+			<iframe 
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12430.618419150835!2d-77.27499585!3d38.84037034999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1733876273969!5m2!1sen!2sus"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen={false}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+				className="absolute inset-0 object-cover mt-16 pointer-events-none"
+			/>
       <div className="z-[1] ml-auto mr-[250px] py-8 px-8 h-full bg-white shadow-lg gap-6 flex flex-col">
 				<div className="flex flex-row gap-2 items-center">
 					<img src={personIcon} className="h-[32px]" />
