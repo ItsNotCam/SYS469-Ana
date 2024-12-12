@@ -1,3 +1,10 @@
+# Project
+
+Did this for Fall 20204 GMU SYS469 class. It is in no way connected or affiliated with Tesla.
+Permalink to demo site: [https://mason.gmu.edu/~cyoung35/anna/](https://mason.gmu.edu/~cyoung35/anna/)
+
+# How to build the app is below
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
