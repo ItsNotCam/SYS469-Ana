@@ -10,7 +10,6 @@ interface NavItemProps {
 const NavItem: React.FC<NavItemProps> = ({ icon, label, selected, handleClick }) => {
 	const bgColor 	= selected ? "white" : "transparent";
 	const boxShadow = selected ? "2px 2px 5px rgba(12,12,12,10%)" : "";
-	const opacity = selected ? "100" : "50";
 
 	return (
 		<div 

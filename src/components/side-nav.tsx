@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
 import NavItem from './nav-item';
 
-import audioIcon from '../assets/audio-icon.png';
 import airConditioningIcon from '../assets/air-conditioning.png';
 import navIcon from "../assets/navigate.png";
 import powerIcon from '../assets/power.png';
-import searchIcon from '../assets/search.png';
 import soundIcon from '../assets/sound.png';
-import temperatureIcon from '../assets/temperature-icon.png';
 import homeIcon from '../assets/home.png';
 
 interface SlideNavProps {
@@ -16,12 +13,12 @@ interface SlideNavProps {
 }
 
 const SideNav: React.FC<SlideNavProps> = (props) => {
-	const [isOpen, setIsOpen] = useState(true);
+	const [isOpen, _] = useState(true);
 	const [selectedIdx, setSelectedIdx] = useState(props.selectedIdx);
 
-	const toggleNav = () => {
-		setIsOpen(!isOpen);
-	};
+	// const toggleNav = () => {
+	// 	setIsOpen(!isOpen);
+	// };
 
 	const handlePageChange = (index: number) => {
 		setSelectedIdx(index);

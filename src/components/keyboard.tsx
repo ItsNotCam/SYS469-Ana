@@ -191,7 +191,7 @@ const Keyboard: React.FC<KeyboardProps> = ({ onClickKey: sendKeyToParent }) => {
   return (
     <div id="keyboard" className="grid grid-cols-[1fr,350px] place-items-center bg-white w-full">
       <div className="flex flex-col gap-4 justify-start items-center p-4">
-        {keys.map((row: KeyboardKey[], i: number) => (
+        {keys.map((row: KeyboardKey[]) => (
           <div
             className="grid mx-auto gap-4"
             style={{

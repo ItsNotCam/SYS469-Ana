@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import maps from "../assets/map.png";
 import searchIcon from "../assets/search.png";
 
 import "./maps.css";
@@ -58,7 +57,6 @@ const Maps: React.FC = () => {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-      {/* <img src={maps} className="-z-[1] absolute w-full h-full cover" /> */}
       <div
         className="
 				absolute top-[75px] left-[20px] bg-[rgb(246,246,246,95%)] rounded-lg 
@@ -69,7 +67,7 @@ const Maps: React.FC = () => {
         <img src={searchIcon} className="ml-4 h-[32px]" />
         <input
           type="text"
-          className="tesla-text-field relative cursor-text outline-none bg-transparent"
+          className="tesla-text-field relative cursor-text outline-none bg-transparent flex-grow"
           placeholder="Navigate"
           value={destination}
           onChange={(e) => setDestination(e.target.value)}
